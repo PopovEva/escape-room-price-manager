@@ -11,7 +11,7 @@ This program was created as a custom order for a company to simplify their daily
 - Interactive UI with Bootstrap styling and animated buttons.
 
 ## Usage
-- Visit the [GitHub Pages link](https://example.github.io/your-page-link) provided in the repository.
+- Visit the [GitHub Pages link](https://popoveva.github.io/escape-room-price-manager/) provided in the repository.
 - Select a room, day, and time.
 - Use the range slider to choose the number of players.
 - Click "Count" to calculate the price.
