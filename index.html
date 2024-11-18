@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price Calculator for Dummies</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="/assets/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+</head>
+<body>
+    <div class="container mt-5">
+        <!-- Logo and Title -->
+        <div class="text-center mb-4">
+            
+            <h1> Price Calculator for Dummies<img src="/assets/dummy.png" alt="Logo" style="width: 90px; height: auto;"></h1>
+
+        </div>
+        
+        <!-- Parameter Selection Form -->
+        <form id="questCalculator">
+            <h3>Select:</h3>
+            <div class="form-row">
+                <div class="form-group col-md-3">
+                    <label for="room">Room:</label>
+                    <select id="room" class="form-control rounded">
+                        <option value="Titanic">Titanic</option>
+                        <option value="Ghost Hunters">Ghost Hunters</option>
+                        <option value="Altair Space Station">Altair Space Station</option>
+                        <option value="Motel Panorama">Motel Panorama</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="day">Day:</label>
+                    <select id="day" class="form-control rounded">
+                        <option value="Su">Sunday</option>
+                        <option value="Mo">Monday</option>
+                        <option value="Tu">Tuesday</option>
+                        <option value="We">Wednesday</option>
+                        <option value="Th">Thursday</option>
+                        <option value="Fr">Friday</option>
+                        <option value="Sa">Saturday</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="time">Time:</label>
+                    <select id="time" class="form-control rounded">
+                        <option value="" disabled selected>Select time</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="players">Number of Players:</label>
+                    <input type="range" id="players" class="form-control-range" value="2" min="2" max="8" oninput="updatePlayerCountDisplay()" required>
+                    <p class="text-center mt-2">Selected Players: <span id="playerCountDisplay">2</span></p>
+                </div>
+                
+            </div>
+        
+            <!-- Calculation and Reset Buttons -->
+            <div class="text-center">
+                <button type="button" class="btn btn-custom-count m-2 rounded-pill" onclick="calculateCost()">
+                    <i class="fas fa-calculator"></i> Count
+                </button>
+                <button type="reset" class="btn btn-custom-reset m-2 rounded-pill">
+                    <i class="fas fa-redo-alt"></i> Reset
+                </button>
+            </div>
+            
+        </form>
+        
+        
+        <!-- Result Display Block -->
+        <div class="card mt-4">
+            <div class="card-header text-center">
+                <h2><i class="fas fa-calculator"></i> Result</h2>
+            </div>
+            <div class="card-body">
+                <h3 id="calculatedPrice" class="display-4 text-center"></h3>
+                <hr>
+                <div id="explanation" class="text-center">
+                    <h3>:פירוט</h3>
+                    <p id="priceExplanation"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center mt-5">
+        <img src="/assets/logo-horizontal.png" alt="Company Logo" style="width: 150px; height: auto;">
+        <p class="mt-2" style="font-size: 0.8rem;">© 2024 Escape Room Israel. All rights reserved.</p>
+        <p class="mt-1" style="font-size: 0.8rem;">Design & development by Eva Popov</p>
+    </footer>
+    
+
+    <script src="app.js"></script>
+</body>
+</html>
+

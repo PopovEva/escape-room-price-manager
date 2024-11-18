@@ -1,0 +1,76 @@
+body {
+    background: linear-gradient(135deg, #ece9e6, #4b7d5d);
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #343a40;
+}
+
+.card {
+    border-radius: 20px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background-color: #83b892;
+    color: #ffffff;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.card-body {
+    padding: 30px;
+}
+
+button {
+    width: auto;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease, color 0.3s ease,  transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #217446;
+    color: #ffffff;
+    transform: scale(1.05);
+}
+
+#calculatedPrice {
+    color: #28a745;
+    font-size: 3rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Custom styles for the Count button */
+.btn-custom-count {
+    background-color: #4caf50; /* Green background */
+    color: white;              /* White text */
+    border: none;              /* No border */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-custom-count:hover {
+    background-color: #45a049; /* Darker green when hovering */
+    transform: scale(1.05);    /* Slightly enlarge on hover */
+}
+
+/* Custom styles for the Reset button */
+.btn-custom-reset {
+    background-color: #f44336; /* Red background */
+    color: white;              /* White text */
+    border: none;              /* No border */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-custom-reset:hover {
+    background-color: #e53935; /* Darker red when hovering */
+    transform: scale(1.05);    /* Slightly enlarge on hover */
+}
